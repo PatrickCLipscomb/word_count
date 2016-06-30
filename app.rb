@@ -1,15 +1,15 @@
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/rck_ppr_scrs.rb')
+require('./lib/find_replace.rb')
 also_reload('lib/**/*.rb')
 
 get('/') do
   erb(:index)
 end
 
-get('/output') do
-  @player_1 = params.fetch('player_1')
-  @player_2 = params.fetch('player_2')
-  @rck_ppr_scrs = @player_1.beats?(@player_2)
-  erb(:output)
+get('/find_replace_output') do
+  @string_replace = params.fetch('string_replace')
+  @string_replacement = params.fetch('string_replacement')
+  @find_replace = params.fetch('string').find_replace(@string_replace, @string_replacement)
+  erb(:find_replace_output)
 end
