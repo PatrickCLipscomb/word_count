@@ -8,4 +8,7 @@ describe("String#word_count") do
   it('return the number of times a give string appears in the string') do
     expect('The Antz gO marching, Two ... by two'.word_count('two')).to(eq(2))
   end
+  it('return the number of times a give string appears in the string') do
+    expect('!days! go by through the days that go by'.word_count('days')).to(eq(2))
+  end
 end
