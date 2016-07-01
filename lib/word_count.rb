@@ -1,14 +1,15 @@
 class String
-  define_method(:find_replace) do |find, replace|
-    str_array = self.split(' ')
+  define_method(:word_count) do |find|
+    str = self.downcase
+    str.delete! ".,!?'"
+    str_array = str.split(' ')
     counter = 0
     str_array.each() do |word|
       if word == find
-        str_array[counter] = replace
+        counter += 1
       end
-      counter += 1
     end
-    str_array.join(' ')
+    counter
   end
 end
 

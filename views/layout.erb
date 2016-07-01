@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Find and Replace</title>
+    <title>Word Count</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href='css/styles.css' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
     <script src='js/scripts.js'></script>
   </head>
-  <body class='center container'>
-    <div class="row container">
-      <div class="col-4-xs">
-      </div>
-      <div class="col-4-xs">
-        <h1 class='center'>Find and Replace</h1>
-        <h3 class='center'>Created by Yours Truly</h3>
-        <%= yield  %>
-      </div>
-      <div class="col-4-xs">
-      </div>
-    </div>
+  <body class='container'>
+    <h1 class='header'>Word Count</h1>
+    <% yield %>
   </body>
 </html>
