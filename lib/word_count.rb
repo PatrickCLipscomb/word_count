@@ -12,5 +12,3 @@ class String
     counter
   end
 end
-
-puts 'hello universe'.find_replace('universe', 'galaxy')
