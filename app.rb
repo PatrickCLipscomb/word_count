@@ -10,7 +10,7 @@ end
 
 get('/wordfreq') do
   @find = params.fetch('find')
-  @string = params.fetch('input_string')
-  @count = @string.word_freq(@find)
+  @str = params.fetch('input_string')
+  @count = @str.word_freq(@find)
   erb(:wordfreq)
 end
